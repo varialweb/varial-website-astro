@@ -5,7 +5,7 @@ import NavLinks from "./NavLinks.astro";
 ---
 <nav class="p-4 md:p-8 lg:px-16 flex justify-between items-center z-50">
   <a href="/">
-    <Image src={varialIcon} alt="Home" loading="eager" width="48" height="48" class="md:w-16 md:h-16" />
+    <Image src={varialIcon} alt="Home" loading="eager" class="md:w-16 md:h-16" />
   </a>
   <details class="lg:hidden">
     <summary class="list-none">
@@ -13,7 +13,7 @@ import NavLinks from "./NavLinks.astro";
     </summary>
     <div class="absolute top-0 left-0 w-4/5 bg-white p-4 md:p-8 flex flex-col gap-5 shadow h-screen">
       <a href="/">
-        <Image src={varialIcon} alt="Home" loading="eager" width="48" height="48" class="md:w-16 md:h-16" />
+        <Image src={varialIcon} alt="Home" loading="eager" class="md:w-16 md:h-16" />
       </a>
       <NavLinks />
     </div>
