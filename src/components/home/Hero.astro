@@ -1,0 +1,10 @@
+---
+import { Image } from "astro:assets"
+import tabletMockup from '../../images/tablet-mockup.png'
+---
+<section class="px-4 py-8 pb-32 flex flex-col items-center gap-8 relative">
+  <Image src={tabletMockup} alt="tablet mockup" loading="eager" class="z-10" />
+  <h1 class="text-5xl text-white font-bold text-center z-10">Kick Your Website into High Gear</h1>
+  <a href="/contact" class="bg-gradient-to-b from-[#67DE0D] to-[#51AE0A] text-white text-xl py-5 block text-center font-bold rounded-full shadow-lg z-10 w-full">Let's go</a>
+  <img src="/hero-blob.svg" alt="" class="absolute w-[200%] md:w-[125%] left-0 z-0 -bottom-4" />
+</section>
