@@ -13,6 +13,6 @@ details summary::-webkit-details-marker {
 
 @layer components {
   .action-button {
-    @apply text-xl leading-tight bg-gradient-to-b from-[#67DE0D] to-[#51AE0A] py-5 px-10 text-center text-white rounded-full font-bold shadow w-fit;
+    @apply text-xl leading-tight bg-gradient-to-b from-[#67DE0D] to-[#51AE0A] py-5 px-10 text-center text-white rounded-full font-bold shadow w-full md:w-fit;
   }
 }
