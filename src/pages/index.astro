@@ -5,6 +5,7 @@ import { Image } from 'astro:assets';
 import groomerHasItMobile from '../images/groomer-has-it-mobile.png';
 import groomerHasItTablet from '../images/groomer-has-it-tablet.png';
 import groomerHasIt from '../images/groomer-has-it.png';
+import squigglyUnderline from '../images/squiggly-underline.png';
 ---
 
 <Layout title="Kick Your Website into High Gear - Varial Web Development">
@@ -13,9 +14,9 @@ import groomerHasIt from '../images/groomer-has-it.png';
 		<section class="w-screen overflow-clip flex flex-col lg:flex-row gap-10 lg:gap-0 items-center py-10">
 			<Image id="groomer-has-it-mobile" src={groomerHasItMobile} alt="Groomer has it" class="md:hidden" />
 			<Image id="groomer-has-it-tablet" src={groomerHasItTablet} alt="Groomer has it" class="hidden md:block lg:hidden" />
-			<Image id="groomer-has-it" src={groomerHasIt} alt="Groomer has it" class="hidden lg:block order-2" />
+			<Image id="groomer-has-it" src={groomerHasIt} alt="Groomer has it" class="hidden lg:block order-2 w-1/2" />
 			<div id="custom-designs-copy" class="py-2.5 px-4 md:px-16 flex flex-col items-center lg:items-start gap-8 md:gap-10">
-				<h2 class="text-4xl font-bold text-center lg:text-start">Custom Web Designs to Bring <span>Your Brand</span> to Life</h2>
+				<h2 class="text-4xl leading-normal font-bold text-center lg:text-start md:max-w-[20ch]">Custom Web Designs to Bring <span class="relative">Your Brand<Image src={squigglyUnderline} alt="" class="w-full absolute left-0 -bottom-2" /></span> to Life</h2>
 				<p class="lg:float-left">
 					As a business owner, you have a vision of how you can make the world a better place through your work. 
 					You are a different caliber than the rest, and it shows in how you show up every day. 
@@ -44,10 +45,10 @@ import groomerHasIt from '../images/groomer-has-it.png';
 	import { animate, inView, timeline } from "motion"
 
 	inView('#hero-content', (info) => {
-		animate(info.target, { opacity: [0, 1] }, { duration: 1 })
+		animate(info.target, { opacity: [0, 1] }, { duration: 2 })
 	})
 	inView('#hero-slide-container', (info) => {
-		animate(info.target, { opacity: [0, 1] }, { duration: 1 })
+		animate(info.target, { opacity: [0, 1] }, { duration: 2 })
 	})
 	const heroSequence = [
 		['#hero-slide', { x: '0%' }, { duration: 3 }],
@@ -63,16 +64,16 @@ import groomerHasIt from '../images/groomer-has-it.png';
 	timeline(heroSequence, { duration: 28, repeat: Infinity,  })
 
 	inView('#groomer-has-it-mobile', (info) => {
-		animate(info.target, { opacity: [0, 1] }, { duration: 1 })
+		animate(info.target, { opacity: [0, 1] }, { duration: 2 })
 	})
 	inView('#groomer-has-it-tablet', (info) => {
-		animate(info.target, { opacity: [0, 1] }, { duration: 1 })
+		animate(info.target, { opacity: [0, 1] }, { duration: 2 })
 	})
 	inView('#groomer-has-it', (info) => {
-		animate(info.target, { opacity: [0, 1] }, { duration: 1 })
+		animate(info.target, { opacity: [0, 1] }, { duration: 2 })
 	})
 	inView('#custom-designs-copy', (info) => {
-		animate(info.target, { opacity: [0, 1] }, { duration: 1 })
+		animate(info.target, { opacity: [0, 1] }, { duration: 2 })
 	})
 </script>
 
