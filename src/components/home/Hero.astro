@@ -1,15 +1,22 @@
 ---
 import { Image } from "astro:assets"
+import mobileMockup from '../../images/mobile-mockup.png'
 import tabletMockup from '../../images/tablet-mockup.png'
+import pcMockup from '../../images/pc-mockup.png'
 import heroBlob from '../../images/hero-blob.png'
 ---
-<section class="px-4 py-8 pb-32 md:py-20 md:pb-64 lg:pt-[150px] lg:px-[5vw] 2xl:px-[15vw] flex flex-col lg:flex-row lg:justify-between items-center gap-8 md:gap-10 relative overflow-clip">
-  <Image src={tabletMockup} alt="tablet mockup" loading="eager" class="z-10 max-w-sm lg:order-2" />
-  <div id="hero-content" class="flex flex-col lg:grid lg:place-items-center gap-8 md:gap-10 relative lg:-left-[8vw] xl:-left-[16vw] lg:pt-8 lg:pl-[10vw]">
+<section class="px-4 py-4 pb-32 md:py-20 md:pb-64 lg:pt-[150px] lg:px-[5vw] 2xl:px-[15vw] flex flex-col lg:flex-row lg:justify-between items-center gap-8 md:gap-10 relative overflow-clip">
+  <div id="hero-slide-container" class="relative z-[11] w-full lg:order-2 overflow-hidden max-w-[400px] lg:max-w-[500px]">
+    <div id="hero-slide" class="w-full grid grid-cols-[100%_100%_100%] grid-rows-[auto] items-end md:items-center gap-16 h-[300px] md:h-[400px]">
+      <Image src={mobileMockup} alt="mobile mockup" loading="eager" class="h-[300px] md:h-[400px] object-contain" />
+      <Image src={tabletMockup} alt="tablet mockup" loading="eager" class="h-[300px] md:h-[400px] object-contain" />
+      <Image src={pcMockup} alt="computer mockup" loading="eager" class="h-[300px] md:h-[400px] object-contain" />
+    </div> 
+  </div>
+  <div id="hero-content" class="flex flex-col lg:grid lg:place-items-center gap-8 md:gap-10 relative z-[5] lg:-left-[8vw] xl:-left-[8vw] 2xl:-left-[16vw] lg:pt-8 lg:pl-[10vw]">
     <h1 class="text-5xl text-white font-bold text-center z-10 max-w-[450px] lg:text-start">Kick Your Website into High Gear</h1>
     <a href="/contact" class="bg-gradient-to-b from-[#67DE0D] to-[#51AE0A] text-white text-xl py-5 block text-center font-bold rounded-full shadow-lg z-10 w-full md:max-w-[300px] md:self-center lg:justify-self-start">Let's go</a>
-    <Image src={heroBlob} alt="" class="absolute w-[56vw] max-w-[unset]" />
+    <Image src={heroBlob} alt="" class="absolute w-[56vw] max-w-[unset] hidden lg:block" />
   </div>
-  <!-- <img src="/hero-blob.svg" alt="" class="absolute w-[200%] md:w-[50vw] left-0 z-0 -bottom-4 md:top-[500px]" /> -->
-   <Image src={heroBlob} alt="" class="absolute bottom-0 w-[237vw] md:w-[133vw] lg:w-[56vw] max-w-[1200px] lg:bottom-auto lg:-left-[7vw] lg:hidden" />
+   <Image src={heroBlob} alt="" class="absolute bottom-0 w-[237vw] md:w-[133vw] lg:w-[56vw] max-w-[1200px] lg:bottom-auto lg:-left-[7vw] lg:hidden " />
 </section>

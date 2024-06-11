@@ -11,9 +11,23 @@ import Hero from '../components/home/Hero.astro';
 </Layout>
 
 <script>
-	import { animate, scroll } from "motion"
+	import { animate, scroll, timeline } from "motion"
 
 	animate('#hero-content', { opacity: [0, 1] })
+
+	const heroSequence = [
+		['#hero-slide', { x: 'calc(-100% - 64px)' }, { duration: 3 }],
+		['#hero-slide', { x: 'calc(-100% - 64px)' }, { duration: 3 }],
+		['#hero-slide', { x: 'calc(-200% - 128px)' }, { duration: 3 }],
+		['#hero-slide', { x: 'calc(-200% - 128px)' }, { duration: 3 }],
+		['#hero-slide', { x: 'calc(-100% - 64px)' }, { duration: 3 }],
+		['#hero-slide', { x: 'calc(-100% - 64px)' }, { duration: 3 }],
+		['#hero-slide', { x: '0%' }, { duration: 3 }],
+	]
+	// @ts-ignore
+	timeline(heroSequence, { delay: 3, duration: 21, repeat: Infinity,  })
+
+
 </script>
 
 
