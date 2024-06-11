@@ -3,13 +3,39 @@ import Layout from '../layouts/Layout.astro';
 import Hero from '../components/home/Hero.astro';
 import { Image } from 'astro:assets';
 import groomerHasItMobile from '../images/groomer-has-it-mobile.png';
+import groomerHasItTablet from '../images/groomer-has-it-tablet.png';
+import groomerHasIt from '../images/groomer-has-it.png';
 ---
 
 <Layout title="Kick Your Website into High Gear - Varial Web Development">
 	<main>
 		<Hero />
-		<section class="w-screen overflow-clip flex flex-col items-center py-10">
+		<section class="w-screen overflow-clip flex flex-col lg:flex-row gap-10 lg:gap-0 items-center py-10">
 			<Image id="groomer-has-it-mobile" src={groomerHasItMobile} alt="Groomer has it" class="md:hidden" />
+			<Image id="groomer-has-it-tablet" src={groomerHasItTablet} alt="Groomer has it" class="hidden md:block lg:hidden" />
+			<Image id="groomer-has-it" src={groomerHasIt} alt="Groomer has it" class="hidden lg:block order-2" />
+			<div id="custom-designs-copy" class="py-2.5 px-4 md:px-16 flex flex-col items-center lg:items-start gap-8 md:gap-10">
+				<h2 class="text-4xl font-bold text-center lg:text-start">Custom Web Designs to Bring <span>Your Brand</span> to Life</h2>
+				<p class="lg:float-left">
+					As a business owner, you have a vision of how you can make the world a better place through your work. 
+					You are a different caliber than the rest, and it shows in how you show up every day. 
+					You’re likely a master of your craft, but when it comes to getting a website going, 
+					it may be overwhelming or downright impossible to fit into your busy life. That’s where we come in. 
+					<br /><br />
+					With Varial Web Services, you will have a close-knit, dedicated team working alongside you to bring your branding and image to life online. 
+					In our digital age, having a strong online presence isn’t just ideal but necessary to stay competitive in your industry. 
+					We understand the ins and outs of online marketing and branding, and can use our expertise to create a website that will keep up with the times, 
+					engage new potential clients, and show Google you mean business... literally.
+					<br /><br />
+					We get it -- your website may not always feel like a top priority. Maybe you muddled your way through WordPress just to get something out there, 
+					or your nephew used his middle school programming class to slap a quick and dirty website together. 
+					You may have even used a web development agency in the past, circa the turn of the century. No matter your story, 
+					we know that it can be daunting to tackle such a big project and figure out where to start to really capture who you are and what you do in your business. 
+					We work diligently to get to know you so that you can continue to focus on what you do best while we do the rest.
+				
+					</p>
+				<a href="/contact" class="action-button">Build My Website</a>
+			</div>
 		</section>
 	</main>
 </Layout>
@@ -17,13 +43,14 @@ import groomerHasItMobile from '../images/groomer-has-it-mobile.png';
 <script>
 	import { animate, inView, timeline } from "motion"
 
-	animate('#hero-content', { opacity: [0, 1] }, { duration: 2 })
-	animate('#hero-slide-container', { opacity: [0, 1] }, { duration: 2 })
-
-	inView('#groomer-has-it-mobile', (info) => {
-		animate(info.target, { opacity: [0, 1] }, { duration: 2 })
+	// animate('#hero-content', { opacity: [0, 1] }, { duration: 2 })
+	// animate('#hero-slide-container', { opacity: [0, 1] }, { duration: 2 })
+	inView('#hero-content', (info) => {
+		animate(info.target, { opacity: [0, 1] }, { duration: 1 })
 	})
-
+	inView('#hero-slide-container', (info) => {
+		animate(info.target, { opacity: [0, 1] }, { duration: 1 })
+	})
 	const heroSequence = [
 		['#hero-slide', { x: 'calc(-100% - 64px)' }, { duration: 3 }],
 		['#hero-slide', { x: 'calc(-100% - 64px)' }, { duration: 3 }],
@@ -36,7 +63,18 @@ import groomerHasItMobile from '../images/groomer-has-it-mobile.png';
 	// @ts-ignore
 	timeline(heroSequence, { delay: 3, duration: 21, repeat: Infinity,  })
 
-
+	inView('#groomer-has-it-mobile', (info) => {
+		animate(info.target, { opacity: [0, 1] }, { duration: 1 })
+	})
+	inView('#groomer-has-it-tablet', (info) => {
+		animate(info.target, { opacity: [0, 1] }, { duration: 1 })
+	})
+	inView('#groomer-has-it', (info) => {
+		animate(info.target, { opacity: [0, 1] }, { duration: 1 })
+	})
+	inView('#custom-designs-copy', (info) => {
+		animate(info.target, { opacity: [0, 1] }, { duration: 1 })
+	})
 </script>
 
 
