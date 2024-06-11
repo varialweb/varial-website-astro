@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/home/Hero.astro';
+
 ---
 
 <Layout title="Kick Your Website into High Gear - Varial Web Development">
@@ -9,6 +10,10 @@ import Hero from '../components/home/Hero.astro';
 	</main>
 </Layout>
 
-<style>
-	
-</style>
+<script>
+	import { animate, scroll } from "motion"
+
+	animate('#hero-content', { opacity: [0, 1] })
+</script>
+
+
