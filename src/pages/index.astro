@@ -1,19 +1,28 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/home/Hero.astro';
-
+import { Image } from 'astro:assets';
+import groomerHasItMobile from '../images/groomer-has-it-mobile.png';
 ---
 
 <Layout title="Kick Your Website into High Gear - Varial Web Development">
 	<main>
 		<Hero />
+		<section class="w-screen overflow-clip flex flex-col items-center py-10">
+			<Image id="groomer-has-it-mobile" src={groomerHasItMobile} alt="Groomer has it" class="md:hidden" />
+		</section>
 	</main>
 </Layout>
 
 <script>
-	import { animate, scroll, timeline } from "motion"
+	import { animate, inView, timeline } from "motion"
 
-	animate('#hero-content', { opacity: [0, 1] })
+	animate('#hero-content', { opacity: [0, 1] }, { duration: 2 })
+	animate('#hero-slide-container', { opacity: [0, 1] }, { duration: 2 })
+
+	inView('#groomer-has-it-mobile', (info) => {
+		animate(info.target, { opacity: [0, 1] }, { duration: 2 })
+	})
 
 	const heroSequence = [
 		['#hero-slide', { x: 'calc(-100% - 64px)' }, { duration: 3 }],
