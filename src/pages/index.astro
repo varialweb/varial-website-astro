@@ -43,8 +43,6 @@ import groomerHasIt from '../images/groomer-has-it.png';
 <script>
 	import { animate, inView, timeline } from "motion"
 
-	// animate('#hero-content', { opacity: [0, 1] }, { duration: 2 })
-	// animate('#hero-slide-container', { opacity: [0, 1] }, { duration: 2 })
 	inView('#hero-content', (info) => {
 		animate(info.target, { opacity: [0, 1] }, { duration: 1 })
 	})
@@ -52,16 +50,17 @@ import groomerHasIt from '../images/groomer-has-it.png';
 		animate(info.target, { opacity: [0, 1] }, { duration: 1 })
 	})
 	const heroSequence = [
-		['#hero-slide', { x: 'calc(-100% - 64px)' }, { duration: 3 }],
-		['#hero-slide', { x: 'calc(-100% - 64px)' }, { duration: 3 }],
-		['#hero-slide', { x: 'calc(-200% - 128px)' }, { duration: 3 }],
-		['#hero-slide', { x: 'calc(-200% - 128px)' }, { duration: 3 }],
-		['#hero-slide', { x: 'calc(-100% - 64px)' }, { duration: 3 }],
-		['#hero-slide', { x: 'calc(-100% - 64px)' }, { duration: 3 }],
 		['#hero-slide', { x: '0%' }, { duration: 3 }],
+		['#hero-slide', { x: 'calc(-100% - 64px)' }, { duration: 4 }],
+		['#hero-slide', { x: 'calc(-100% - 64px)' }, { duration: 4 }],
+		['#hero-slide', { x: 'calc(-200% - 128px)' }, { duration: 4 }],
+		['#hero-slide', { x: 'calc(-200% - 128px)' }, { duration: 4 }],
+		['#hero-slide', { x: 'calc(-100% - 64px)' }, { duration: 4 }],
+		['#hero-slide', { x: 'calc(-100% - 64px)' }, { duration: 4 }],
+		['#hero-slide', { x: '0%' }, { duration: 4 }],
 	]
 	// @ts-ignore
-	timeline(heroSequence, { delay: 3, duration: 21, repeat: Infinity,  })
+	timeline(heroSequence, { duration: 28, repeat: Infinity,  })
 
 	inView('#groomer-has-it-mobile', (info) => {
 		animate(info.target, { opacity: [0, 1] }, { duration: 1 })
