@@ -6,6 +6,10 @@ import groomerHasItMobile from '../images/groomer-has-it-mobile.png';
 import groomerHasItTablet from '../images/groomer-has-it-tablet.png';
 import groomerHasIt from '../images/groomer-has-it.png';
 import squigglyUnderline from '../images/squiggly-underline.png';
+import performanceIcon from '../images/performance-icon.png';
+import accessibilityIcon from '../images/accessibility-icon.png';
+import bestPracticesIcon from '../images/best-practices-icon.png';
+import seoIcon from '../images/seo-icon.png';
 ---
 
 <Layout title="Kick Your Website into High Gear - Varial Web Development">
@@ -60,6 +64,51 @@ import squigglyUnderline from '../images/squiggly-underline.png';
 			</p>
 			<a href="#contact" class="action-button">Test My Metrics</a>
 		</section>
+		<section class="py-16 md:gap-24 lg:px-16 overflow-hidden relative">
+			<ul class="flex flex-col lg:grid lg:grid-cols-2 lg:justify-items-center 2xl:grid-cols-4 lg:justify-center items-center gap-16 md:gap-24">
+				<div id="cards-banner" class="absolute w-screen h-[170px] bg-[#0368AF] hidden 2xl:block"></div>
+				<li id="performance-card" class="bg-white h-full grid place-items-center gap-8 py-10 px-5 md:px-12 border-2 border-[#02D7D4] rounded-[20px] relative z-10 max-w-[350px]">
+					<Image src={performanceIcon} alt="" class="h-[160px] w-auto" />
+					<h2 class="text-4xl text-center">Website Performance</h2>
+					<p class="text-center lg:w-[250px]">
+						We design mobile-first so your website looks great and loads quickly on every device. With servers hosted all over the world, every visitor can access your page in a matter of seconds.
+					</p>
+					<div class="absolute w-[calc(100%_+_24px)] h-[calc(100%_-_32px)] border-2 border-[#0368AF] rounded-[20px]"></div>
+					<div class="absolute w-[calc(50vw-50%)] md:w-[calc(50vw-175px)] h-[170px] bg-[#0368AF] -left-[calc(50vw-50%)] md:-left-[calc(50vw-175px)] border-r-2 border-[#02D7D4] 2xl:hidden lg:w-[calc(25vw-175px+32px)] lg:-left-[calc(25vw-175px+32px)]"></div>
+					<div class="absolute w-[calc(50vw-50%)] md:w-[calc(50vw-175px)] h-[170px] bg-[#0368AF] -right-[calc(50vw-50%)] md:-right-[calc(50vw-175px)] border-l-2 border-[#02D7D4] 2xl:hidden lg:w-[calc(25vw-175px+32px)] lg:-right-[calc(25vw-175px+32px)]"></div>
+				</li>
+				<li id="accessibility-card" class="bg-white h-full grid place-items-center gap-8 py-10 px-5 md:px-12 border-2 border-[#02D7D4] rounded-[20px] relative z-10 max-w-[350px]">
+					<Image src={accessibilityIcon} alt="" class="h-[160px] w-auto" />
+					<h2 class="text-4xl text-center">Visitor Accessibility</h2>
+					<p class="text-center lg:w-[250px]">
+						We want every site visitor to easily be able to access your content. Our pages are designed for color blindness, vision impairments, and screen readers so you can reach every demographic.
+					</p>
+					<div class="absolute w-[calc(100%_+_24px)] h-[calc(100%_-_32px)] border-2 border-[#0368AF] rounded-[20px]"></div>
+					<div class="absolute w-[calc(50vw-50%)] md:w-[calc(50vw-175px)] h-[170px] bg-[#0368AF] -left-[calc(50vw-50%)] md:-left-[calc(50vw-175px)] border-r-2 border-[#02D7D4] 2xl:hidden lg:w-[calc(25vw-175px+32px)] lg:-left-[calc(25vw-175px+32px)]"></div>
+					<div class="absolute w-[calc(50vw-50%)] md:w-[calc(50vw-175px)] h-[170px] bg-[#0368AF] -right-[calc(50vw-50%)] md:-right-[calc(50vw-175px)] border-l-2 border-[#02D7D4] 2xl:hidden lg:w-[calc(25vw-175px+32px)] lg:-right-[calc(25vw-175px+32px)]"></div>
+				</li>
+				<li id="best-practices-card" class="bg-white h-full grid place-items-center gap-8 py-10 px-5 md:px-12 border-2 border-[#02D7D4] rounded-[20px] relative z-10 max-w-[350px]">
+					<Image src={bestPracticesIcon} alt="" class="h-[160px] w-auto relative left-4" />
+					<h2 class="text-4xl text-center">Best Practices</h2>
+					<p class="text-center lg:w-[250px]">
+						We use the latest technology to develop secure sites that protect you and your visitors. Throughout development, we keep user experience top of mind to ensure the website feels seamless at every step.
+					</p>
+					<div class="absolute w-[calc(100%_+_24px)] h-[calc(100%_-_32px)] border-2 border-[#0368AF] rounded-[20px]"></div>
+					<div class="absolute w-[calc(50vw-50%)] md:w-[calc(50vw-175px)] h-[170px] bg-[#0368AF] -left-[calc(50vw-50%)] md:-left-[calc(50vw-175px)] border-r-2 border-[#02D7D4] 2xl:hidden lg:w-[calc(25vw-175px+32px)] lg:-left-[calc(25vw-175px+32px)]"></div>
+					<div class="absolute w-[calc(50vw-50%)] md:w-[calc(50vw-175px)] h-[170px] bg-[#0368AF] -right-[calc(50vw-50%)] md:-right-[calc(50vw-175px)] border-l-2 border-[#02D7D4] 2xl:hidden lg:w-[calc(25vw-175px+32px)] lg:-right-[calc(25vw-175px+32px)]"></div>
+				</li>
+				<li id="seo-card" class="bg-white h-full grid place-items-center gap-8 py-10 px-5 md:px-12 border-2 border-[#02D7D4] rounded-[20px] relative z-10 max-w-[350px]">
+					<Image src={seoIcon} alt="" class="h-[160px] w-auto" />
+					<h2 class="text-4xl text-center">Search Engine Optimization</h2>
+					<p class="text-center lg:w-[250px]">
+						We optimize your content throughout development so your site doesn’t get bogged down. Plus, all of the web copy is crafted with natural keywords to boost your ranking on search engines.
+					</p>
+					<div class="absolute w-[calc(100%_+_24px)] h-[calc(100%_-_32px)] border-2 border-[#0368AF] rounded-[20px]"></div>
+					<div class="absolute w-[calc(50vw-50%)] md:w-[calc(50vw-175px)] lg:w-[calc(25vw-175px+32px)] h-[170px] bg-[#0368AF] -left-[calc(50vw-50%)] md:-left-[calc(50vw-175px)] lg:-left-[calc(25vw-175px+32px)] border-r-2 border-[#02D7D4] 2xl:hidden"></div>
+					<div class="absolute w-[calc(50vw-50%)] md:w-[calc(50vw-175px)] lg:w-[calc(25vw-175px+32px)] h-[170px] bg-[#0368AF] -right-[calc(50vw-50%)] md:-right-[calc(50vw-175px)] lg:-right-[calc(25vw-175px+32px)] border-l-2 border-[#02D7D4] 2xl:hidden"></div>
+				</li>
+			</ul>
+		</section>
 	</main>
 </Layout>
 
@@ -100,6 +149,22 @@ import squigglyUnderline from '../images/squiggly-underline.png';
 	inView('#seo-section', (info) => {
 		animate(info.target, { opacity: [0, 1] }, { duration: 2 })
 	})
+	inView('#performance-card', (info) => {
+		animate(info.target, { opacity: [0, 1] }, { duration: 2 })
+	})
+	inView('#accessibility-card', (info) => {
+		animate(info.target, { opacity: [0, 1] }, { duration: 2 })
+	})
+	inView('#best-practices-card', (info) => {
+		animate(info.target, { opacity: [0, 1] }, { duration: 2 })
+	})
+	inView('#seo-card', (info) => {
+		animate(info.target, { opacity: [0, 1] }, { duration: 2 })
+	})
+	inView('#cards-banner', (info) => {
+		animate(info.target, { opacity: [0, 1] }, { duration: 2 })
+	})
+
 </script>
 
 
