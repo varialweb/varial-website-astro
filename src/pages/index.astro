@@ -11,12 +11,12 @@ import squigglyUnderline from '../images/squiggly-underline.png';
 <Layout title="Kick Your Website into High Gear - Varial Web Development">
 	<main>
 		<Hero />
-		<section class="w-screen overflow-clip flex flex-col lg:flex-row gap-10 lg:gap-0 items-center py-10">
+		<section class="overflow-hidden flex flex-col lg:flex-row gap-10 lg:gap-0 items-center py-5">
 			<Image id="groomer-has-it-mobile" src={groomerHasItMobile} alt="Groomer has it" class="md:hidden" />
 			<Image id="groomer-has-it-tablet" src={groomerHasItTablet} alt="Groomer has it" class="hidden md:block lg:hidden" />
 			<Image id="groomer-has-it" src={groomerHasIt} alt="Groomer has it" class="hidden lg:block order-2 w-1/2" />
 			<div id="custom-designs-copy" class="py-2.5 px-4 md:px-16 flex flex-col items-center lg:items-start gap-8 md:gap-10">
-				<h2 class="text-4xl leading-normal font-bold text-center lg:text-start md:max-w-[20ch]">Custom Web Designs to Bring <span class="relative">Your Brand<Image src={squigglyUnderline} alt="" class="w-full absolute left-0 -bottom-2" /></span> to Life</h2>
+				<h2 class="text-4xl leading-tight font-bold text-center lg:text-start md:max-w-[20ch]">Custom Web Designs to Bring <span class="relative">Your Brand<Image src={squigglyUnderline} alt="" class="w-full absolute left-0 -bottom-2" /></span> to Life</h2>
 				<p class="lg:float-left">
 					As a business owner, you have a vision of how you can make the world a better place through your work. 
 					You are a different caliber than the rest, and it shows in how you show up every day. 
@@ -37,6 +37,28 @@ import squigglyUnderline from '../images/squiggly-underline.png';
 					</p>
 				<a href="/contact" class="action-button">Build My Website</a>
 			</div>
+		</section>
+		<section id="seo-section" class="flex flex-col items-center py-5 px-4 md:px-16 gap-8 md:gap-10">
+			<h2 class="text-4xl leading-tight font-bold text-center md:max-w-[30ch]">Web Development & Optimization for Your <span class="relative">Best Google<Image src={squigglyUnderline} alt="" class="w-full absolute left-0 -bottom-2" /></span> Ranking</h2>
+			<p class="max-w-[85ch]">
+				We develop all of our websites using the best practices to ensure your business is ranked highly in the eyes of Google and other major search engines. 
+				Using Google’s very own metrics as a guide, we program and optimize your website so you can climb in search engine results and have a website that not only looks great, 
+				but runs flawlessly for every prospective client. 
+				<br /><br />
+				Many web development agencies will make lofty promises such as guaranteeing #1 in Google search results. 
+				As much as we’d like to sell you the secret to success, we don’t sugar coat or puff up this part of the business. 
+				If an agency tells you they can boost you in a matter of months, it’s sadly too good to be true. 
+				The reality is that it takes years to establish a reputable, active foundation online, and there isn’t any quick fix that can do this for you without cutting corners. 
+				These kind of accomplishments often rely on some shady practices that Google frowns upon, such as SEO stuffing or fake back links, 
+				which can hurt your website’s success in the long run. 
+				<br /><br />
+				We pride ourselves in ethical practices when it comes to boosting your website, and we value transparency with every client that we work with. 
+				While it won’t happen overnight, we can help you work toward this goal by creating solid building blocks to work off of. 
+				With our conscious methods and strategies, you can trust that your website will have the pieces it needs to compete in the digital space while you are building your business. 
+				With proper optimization, accessible, mobile-friendly designs, and SEO driven content, 
+				you won’t have to spend a fortune or worry about risky workarounds to find yourself rising in the search results. 
+			</p>
+			<a href="#contact" class="action-button">Test My Metrics</a>
 		</section>
 	</main>
 </Layout>
@@ -73,6 +95,9 @@ import squigglyUnderline from '../images/squiggly-underline.png';
 		animate(info.target, { opacity: [0, 1] }, { duration: 2 })
 	})
 	inView('#custom-designs-copy', (info) => {
+		animate(info.target, { opacity: [0, 1] }, { duration: 2 })
+	})
+	inView('#seo-section', (info) => {
 		animate(info.target, { opacity: [0, 1] }, { duration: 2 })
 	})
 </script>

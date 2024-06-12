@@ -7,8 +7,9 @@ details summary::-webkit-details-marker {
 }
 
 @layer base {
-  body { @apply text-[#2D2D2D]; }
-  h1, h2, h3, h4, h5, h6 { @apply font-bold; }
+  body { @apply text-[#2D2D2D] text-[17px]; }
+  h1, h2, h3, h4, h5, h6 { @apply font-bold leading-normal; }
+  p { @apply leading-relaxed md:text-[18px]; }
 }
 
 @layer components {
