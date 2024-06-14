@@ -10,6 +10,7 @@ import performanceIcon from '../images/performance-icon.png';
 import accessibilityIcon from '../images/accessibility-icon.png';
 import bestPracticesIcon from '../images/best-practices-icon.png';
 import seoIcon from '../images/seo-icon.png';
+import webCopy from '../images/web-copy.png';
 ---
 
 <Layout title="Kick Your Website into High Gear - Varial Web Development">
@@ -109,6 +110,28 @@ import seoIcon from '../images/seo-icon.png';
 				</li>
 			</ul>
 		</section>
+		<section class="flex flex-col xl:flex-row items-center gap-8 md:gap-12 lg:gap-24 py-5">
+			<Image src={webCopy} alt="" id="web-copy-img" class="xl:w-[42%] !h-auto" />
+			<div id="web-copy-content" class="flex flex-col items-center gap-8 p-4">
+				<h2 class="text-4xl text-center">Unique Web Copy <span class="relative">Tailored to You<Image src={squigglyUnderline} alt="" class="absolute left-0 w-full" /></span></h2>
+				<p>
+					Our web development services include web copy, meaning you don’t have to be a professional writer to tell the world about your business. 
+					You know your business better than anyone, so we take the time to get to know you and really understand what makes your brand stand out from the crowd. 
+					Through personal interviewing about your company’s history, mission, vision, and services, we gather all of the details we need to properly share your story. 
+					<br /><br />
+					On top of having that personal touch, all of the copy written is crafted with SEO in mind, meaning keywords are mindfully utilized to attract more page visitors. 
+					While keywords are important, it is even more critical to make sure your website sounds natural and authentic to prospective customers. 
+					Some developers and copywriters will use unethical tactics like keyword stuffing, which not only makes your business sound robotic and forced, 
+					but can also negatively impact your overall ranking in search engines like Google because the practice is frowned upon. 
+					We take the time to put together copy that speaks to your voice without compromising your business’s integrity. 
+					<br /><br />
+					We know all of the pieces are there even if you don’t have everything written down in a succinct business plan. 
+					By collaborating with you, we can capture your company’s unique brand, culture, 
+					and values to expand your reach into the community and turn more readers into lifelong customers. 
+				</p>
+				<a href="#contact" class="action-button">Tell My Story</a>
+			</div>
+		</section>
 	</main>
 </Layout>
 
@@ -161,9 +184,15 @@ import seoIcon from '../images/seo-icon.png';
 	inView('#seo-card', (info) => {
 		animate(info.target, { opacity: [0, 1] }, { duration: 2 })
 	})
-	// inView('#cards-banner', (info) => {
-	// 	animate(info.target, { opacity: [0.5, 1] }, { duration: 1 })
-	// })
+	inView('#cards-banner', (info) => {
+		animate(info.target, { opacity: [0, 1] }, { duration: 2 })
+	})
+	inView('#web-copy-img', (info) => {
+		animate(info.target, { opacity: [0, 1] }, { duration: 2 })
+	})
+	inView('#web-copy-content', (info) => {
+		animate(info.target, { opacity: [0, 1] }, { duration: 2 })
+	})
 
 </script>
 
