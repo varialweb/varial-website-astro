@@ -11,6 +11,7 @@ import accessibilityIcon from '../images/accessibility-icon.png';
 import bestPracticesIcon from '../images/best-practices-icon.png';
 import seoIcon from '../images/seo-icon.png';
 import webCopy from '../images/web-copy.png';
+import heatherAndDanny from '../images/heather-and-danny.png';
 ---
 
 <Layout title="Kick Your Website into High Gear - Varial Web Development">
@@ -112,7 +113,7 @@ import webCopy from '../images/web-copy.png';
 		</section>
 		<section class="flex flex-col xl:flex-row items-center gap-8 md:gap-12 lg:gap-24 py-5">
 			<Image src={webCopy} alt="" id="web-copy-img" class="xl:w-[42%] !h-auto" />
-			<div id="web-copy-content" class="flex flex-col items-center gap-8 p-4">
+			<div id="web-copy-content" class="flex flex-col items-center gap-8 md:px-16 p-4">
 				<h2 class="text-4xl text-center">Unique Web Copy <span class="relative">Tailored to You<Image src={squigglyUnderline} alt="" class="absolute left-0 w-full" /></span></h2>
 				<p>
 					Our web development services include web copy, meaning you don’t have to be a professional writer to tell the world about your business. 
@@ -130,6 +131,22 @@ import webCopy from '../images/web-copy.png';
 					and values to expand your reach into the community and turn more readers into lifelong customers. 
 				</p>
 				<a href="#contact" class="action-button">Tell My Story</a>
+			</div>
+		</section>
+		<section class="flex flex-col xl:flex-row gap-8 px-4 md:px-16 xl:pl-16 xl:pr-0 py-5 md:py-12 items-center">
+			<Image id="heather-and-danny" src={heatherAndDanny} alt="Heather and Danny" class="xl:order-2 xl:w-[45.5vw] relative xl:-right-16" />
+			<div id="about-content" class="flex flex-col items-center gap-8">
+				<h2 class="text-4xl text-center">Independently Owned by <br class="" /><span class="relative">People Who Care<Image src={squigglyUnderline} alt="" class="absolute left-0 w-full" /></span></h2>
+				<p>
+					In 2021, we formed Varial Web Development with a vision of doing web design differently. We had seen so many web agencies using gimmicky tactics and inferior development methods, all while charging outrageous prices. Both of us saw a huge gap in quality and service that we knew we could bring to small and large business owners at affordable rates. 
+					<br /><br />
+					Danny has been a programmer for over 20 years, and is an innovative thinker who is always ready for a new challenge. With any project, he is eager to bring high level results to every client so they have a website that performs well and helps them grow. He is always learning and striving to keep up with new trends, needs, and advancements so you have the very best website. 
+					<br /><br />
+					Heather is a lifelong writer and published journalist with a knack for design and creativity. She is deeply passionate about people and takes exceptional care of every client she works with. Her goal is to bring forth a product that captures the voice, brand, and values of each company, all while working right alongside the you to help you develop an online presence you are proud of. 
+					<br /><br />
+					Together, we make a well-rounded team that believes in your brand and your business. At the heart of our work is our passion for you and your success, and through a strong web presence we know your company can reach even more people to make a positive impact. 
+				</p>
+				<a href="/about" class="action-button">Meet Our Team</a>
 			</div>
 		</section>
 	</main>
@@ -191,6 +208,12 @@ import webCopy from '../images/web-copy.png';
 		animate(info.target, { opacity: [0, 1] }, { duration: 2 })
 	})
 	inView('#web-copy-content', (info) => {
+		animate(info.target, { opacity: [0, 1] }, { duration: 2 })
+	})
+	inView('#heather-and-danny', (info) => {
+		animate(info.target, { opacity: [0, 1] }, { duration: 2 })
+	})
+	inView('#about-content', (info) => {
 		animate(info.target, { opacity: [0, 1] }, { duration: 2 })
 	})
 
