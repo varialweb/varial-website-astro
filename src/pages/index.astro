@@ -13,6 +13,7 @@ import bestPracticesIcon from '../images/best-practices-icon.png';
 import seoIcon from '../images/seo-icon.png';
 import webCopy from '../images/web-copy.png';
 import heatherAndDanny from '../images/heather-and-danny.png';
+import ContactForm from '../components/ContactForm.svelte'
 ---
 
 <Layout title="Kick Your Website into High Gear - Varial Web Development">
@@ -151,6 +152,9 @@ import heatherAndDanny from '../images/heather-and-danny.png';
 			</div>
 		</section>
 		<Portfolio />
+		<section class="flex flex-col items-center overflow-hidden">
+			<ContactForm client:load />
+		</section>
 	</main>
 </Layout>
 

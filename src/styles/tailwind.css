@@ -10,6 +10,8 @@ details summary::-webkit-details-marker {
   body { @apply text-[#2D2D2D] text-[17px]; }
   h1, h2, h3, h4, h5, h6 { @apply font-bold leading-normal; }
   p { @apply leading-relaxed md:text-[18px]; }
+  label { @apply flex flex-col gap-2 w-full; }
+  input { @apply p-2 rounded text-[#2D2D2D] w-full; }
 }
 
 @layer components {
