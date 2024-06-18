@@ -1,0 +1,53 @@
+---
+import { Image } from "astro:assets";
+import squigglyUnderline from '../../images/squiggly-underline.png';
+import empactCoachingDesign from '../../images/empact-coaching-design.png';
+import hiddenTalentDesign from '../../images/hidden-talent-design.png';
+import massiveImpactDesign from '../../images/massive-impact-design.png';
+import ambConstructionDesign from '../../images/amb-construction-design.png';
+import vbncDesign from '../../images/vbnc-design.png';
+import nicholsonDesign from '../../images/nicholson-design.png';
+---
+<section class="flex flex-col gap-8 items-center py-5 px-4 overflow-hidden">
+  <!-- <div id="portfolio-images" class="flex items-center relative gap-4 md:gap-8 -left-[52.5%] lg:-left-[26.25%] mx-auto transition overflow-scroll"> -->
+  <div id="portfolio-images" class="flex items-center relative gap-4 md:gap-8 mx-auto transition duration-[1500] overflow-x-scroll overflow-y-hidden snap-mandatory snap-x max-w-5xl p-4 scroll-smooth">
+    <Image src={empactCoachingDesign} alt="Empact Coaching" class="w-full snap-center" />
+    <Image src={hiddenTalentDesign} alt="Hidden Talent" class="w-full snap-center" />
+    <Image src={massiveImpactDesign} alt="Massive Impact" class="w-full snap-center" />
+    <Image src={ambConstructionDesign} alt="AMB Construction" class="w-full snap-center" />
+    <Image src={vbncDesign} alt="VBNC Physical Therapy" class="w-full snap-center" />
+    <Image src={nicholsonDesign} alt="Nicholson Insurance" class="w-full snap-center" />
+  </div>
+  <div class="max-w-xl flex flex-col items-center gap-8">
+    <h2 class="text-4xl text-center w-fit relative">Our Portfolio<Image src={squigglyUnderline} alt="" class="absolute w-full" /></h2>
+    <p>
+      We tailor every web project to you and your needs. Whether you are looking for a flashy and modern site or something simple yet sleek to tell your story, we can craft a website that matches your vibe. No matter the style you choose, we always use ethical, performant-driven practices so you can trust your website works well while engaging your audience.
+      <br /><br />
+      We know it can be challenging to decide on what branding and messaging you want to put out there to attract the desired clientele, which is why we take steps to help you find your unique voice and style if you haven’t found it yet. Even long-established branding can use a little freshening up now and then to modernize and energize your business, and we can help you develop something that will evolve with you as you grow. 
+    </p>
+    <a href="/portfolio" class="action-button">Explore Our Projects</a>
+  </div>
+</section>
+
+<style>
+  #portfolio-images::-webkit-scrollbar {
+    display: none;
+  }
+</style>
+
+<script>
+  const element = document.querySelector('#portfolio-images')
+  const width = Number(element?.clientWidth) * 5
+  setInterval(() => {
+    if (element) {
+      console.log(element.scrollLeft, width)
+      element.scrollBy({ left: 100 })
+
+      if (element.scrollLeft >= width) {
+      element?.scrollTo(0, 0)
+    }
+    }
+
+    
+  }, 5000)
+</script>
