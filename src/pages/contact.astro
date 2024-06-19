@@ -7,7 +7,7 @@ import ContactBlob from '../images/contact-blob.png'
 
 <Layout title="Contact us! - Varial Web Development">
   <main class="flex flex-col items-center overflow-hidden py-8 my-8 lg:my-8 px-4 relative">
-    <ContactForm transition:persist>
+    <ContactForm client:load transition:persist>
       <Image src={ContactBlob} alt="" class="absolute bottom-0 -left-[40%] md:-left-[5%] lg:left-8 right-0 mx-auto h-full w-auto max-w-[unset]" />
     </ContactForm>
   </main>
