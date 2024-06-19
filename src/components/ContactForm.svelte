@@ -1,21 +1,40 @@
+<script lang="ts">
 
-
-<script>
-  import contactBlob from '../images/contact-blob.png'
   let loading = false
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault()
-    console.log('submitted')
+    const formData = new FormData(event.target as HTMLFormElement)
     loading = true
+
+    await fetch('/api/contact', {
+      method: 'POST',
+      body: formData,
+    })
+    .then(response => response.json())
+    .then(result => {
+      console.log('RESULT', result)
+      loading = false
+    }).catch(error => {
+      console.error('ERROR', error)
+    })
   }
 </script>
-<div class="relative w-fit p-4 flex flex-col items-center">
-  <form on:submit={handleSubmit} class="relative z-20 text-white p-4 flex flex-col gap-8">
-    <h2 class="text-center">Build Your Website</h2>
+
+<div class="grid place-items-center w-full max-w-md">
+  <form on:submit={handleSubmit} class="relative z-20 text-white flex flex-col items-center gap-8 w-full">
+    <h2 class="text-center text-3xl mt-32 md:mt-32">Build Your Website</h2>
     <label for="name">
       Name
       <input name="name" id="name" placeholder="John Smith" required />
+    </label>
+    <label for="email">
+      Email
+      <input type="email" name="email" id="email" placeholder="you@yourcompany.com" />
+    </label>
+    <label for="phone">
+      Phone
+      <input name="phone" id="phone" placeholder="(555) 555-5555" />
     </label>
     <label for="business">
       Business Name
@@ -23,9 +42,9 @@
     </label>
     <label for="website">
       Current Website
-      <input name="website" id="website" placeholder="www.yourbusiness.com" />
+      <input name="website" id="website" placeholder="www.yourcompany.com" />
     </label>
-    <button type="submit" class="action-button z-20">
+    <button type="submit" class="action-button z-20 mt-8 mb-16">
       {#if loading}
         <span>Sending...</span>
       {:else}
@@ -33,5 +52,10 @@
       {/if}
     </button>
   </form>
-  <img src={contactBlob.src} alt="" class="absolute top-0 -left-[25%] z-10 h-full w-auto max-w-[unset]" />
+  <slot>You forgot the background image</slot>
 </div>
+
+<style>
+  form label { width: 100%; }
+  form label input { width: 100%; }
+</style>

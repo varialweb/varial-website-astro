@@ -40,14 +40,12 @@ import nicholsonDesign from '../../images/nicholson-design.png';
   const width = Number(element?.clientWidth) * 5
   setInterval(() => {
     if (element) {
-      console.log(element.scrollLeft, width)
+      // console.log(element.scrollLeft, width)
       element.scrollBy({ left: 100 })
 
       if (element.scrollLeft >= width) {
       element?.scrollTo(0, 0)
     }
     }
-
-    
   }, 5000)
 </script>
