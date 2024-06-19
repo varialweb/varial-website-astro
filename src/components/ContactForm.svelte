@@ -1,6 +1,8 @@
 <script lang="ts">
 
   let loading = false
+  let sent = false
+  let error = false
 
   async function handleSubmit(event) {
     event.preventDefault()
@@ -14,6 +16,13 @@
     .then(response => response.json())
     .then(result => {
       console.log('RESULT', result)
+      if (result.success) {
+        sent = true
+        error = false
+      } else {
+        sent = false
+        error = true
+      }
       loading = false
     }).catch(error => {
       console.error('ERROR', error)
@@ -44,13 +53,27 @@
       Current Website
       <input name="website" id="website" placeholder="www.yourcompany.com" />
     </label>
-    <button type="submit" class="action-button z-20 mt-8 mb-16">
-      {#if loading}
-        <span>Sending...</span>
-      {:else}
-        <span>Submit</span>
-      {/if}
-    </button>
+    <label for="comments">
+      How can we help?
+      <textarea 
+        id="comments"
+        name="comments"
+        placeholder="Increase my website performance, get a new logo, etc."
+        rows="4"
+      />
+    </label>
+    {#if sent}
+      <p class="text-[#51AE0A] action-button from-white to-white z-20 mt-8 mb-16">Successfully sent!</p>
+    {:else}
+      <button type="submit" class="action-button z-20 mt-8 mb-16">
+        {#if loading}
+          <span>Sending...</span>
+        {:else}
+          <span>Submit</span>
+        {/if}
+      </button>
+    {/if}
+    
   </form>
   <slot>You forgot the background image</slot>
 </div>

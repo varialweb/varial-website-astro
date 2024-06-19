@@ -67,7 +67,7 @@ import ContactBlob from '../images/contact-blob.png'
 				With proper optimization, accessible, mobile-friendly designs, and SEO driven content, 
 				you won’t have to spend a fortune or worry about risky workarounds to find yourself rising in the search results. 
 			</p>
-			<a href="#contact" class="action-button">Test My Metrics</a>
+			<a href="/contact" class="action-button">Test My Metrics</a>
 		</section>
 		<section class="py-16 md:gap-24 lg:px-16 overflow-hidden relative">
 			<ul class="flex flex-col lg:grid lg:grid-cols-2 lg:justify-items-center 2xl:grid-cols-4 lg:justify-center items-center gap-16 md:gap-24">
@@ -133,7 +133,7 @@ import ContactBlob from '../images/contact-blob.png'
 					By collaborating with you, we can capture your company’s unique brand, culture, 
 					and values to expand your reach into the community and turn more readers into lifelong customers. 
 				</p>
-				<a href="#contact" class="action-button">Tell My Story</a>
+				<a href="/contact" class="action-button">Tell My Story</a>
 			</div>
 		</section>
 		<section class="flex flex-col xl:flex-row gap-8 px-4 md:px-16 xl:pl-16 xl:pr-0 py-5 md:py-12 items-center overflow-hidden">
@@ -153,8 +153,8 @@ import ContactBlob from '../images/contact-blob.png'
 			</div>
 		</section>
 		<Portfolio />
-		<section class="flex flex-col items-center overflow-hidden py-8 lg:my-8 px-4 relative">
-			<ContactForm client:load >
+		<section id="contact" class="flex flex-col items-center overflow-hidden py-8 my-8 lg:my-8 px-4 relative">
+			<ContactForm client:load transition:persist >
 				<Image src={ContactBlob} alt="" class="absolute bottom-0 -left-[40%] md:-left-[5%] lg:left-8 right-0 mx-auto h-full w-auto max-w-[unset]" />
 			</ContactForm>
 		</section>
@@ -223,6 +223,9 @@ import ContactBlob from '../images/contact-blob.png'
 		animate(info.target, { opacity: [0, 1] }, { duration: 2 })
 	})
 	inView('#about-content', (info) => {
+		animate(info.target, { opacity: [0, 1] }, { duration: 2 })
+	})
+	inView('#contact', (info) => {
 		animate(info.target, { opacity: [0, 1] }, { duration: 2 })
 	})
 

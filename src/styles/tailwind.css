@@ -7,11 +7,11 @@ details summary::-webkit-details-marker {
 }
 
 @layer base {
-  body { @apply text-[#2D2D2D] text-[17px]; }
+  body { @apply text-[#2D2D2D] text-[17px] scroll-smooth; }
   h1, h2, h3, h4, h5, h6 { @apply font-bold leading-normal; }
   p { @apply leading-relaxed md:text-[18px]; }
   label { @apply flex flex-col gap-0 w-full; }
-  input { @apply p-2 rounded text-[#2D2D2D] w-full; }
+  input, textarea { @apply p-2 rounded text-[#2D2D2D] w-full resize-y }
 }
 
 @layer components {
